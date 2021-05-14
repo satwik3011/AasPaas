@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "164177368141",
+    "project_id": "aaspaas-29d95",
+    "storage_bucket": "aaspaas-29d95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164177368141:android:bae51d854c575ea41cf804",
+        "android_client_info": {
+          "package_name": "com.satwik.aaspaas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164177368141-rqm098cvssnovc5qhjjmr2qcnq6lr5ch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.satwik.aaspaas",
+            "certificate_hash": "0458c9cc90142944213a5fd6c2e9151dd608351d"
+          }
+        },
+        {
+          "client_id": "164177368141-g67okguo7re230mtdodoksmncq3v43nj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn3yDaqMRtQKTfAZR_XFuGCPrm8htW8d0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164177368141-g67okguo7re230mtdodoksmncq3v43nj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "164177368141-cjo9v5ld6lvicue0h2kcn6upaj41k85g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.satwik.aaspaas"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
