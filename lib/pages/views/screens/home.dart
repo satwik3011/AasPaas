@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:fluttershare/pages/views/widgets/post_item.dart';
-import 'package:fluttershare/pages/util/data.dart';
+import 'package:social_app_ui/views/widgets/post_item.dart';
+import 'package:social_app_ui/util/data.dart';
 
-class Timeline extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  _TimelineState createState() => _TimelineState();
+  _HomeState createState() => _HomeState();
 }
 
-class _TimelineState extends State<Timeline> {
+class _HomeState extends State<Home> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -24,7 +25,7 @@ class _TimelineState extends State<Timeline> {
       ),
       body: ListView.builder(
         padding: EdgeInsets.symmetric(horizontal: 20),
-        itemCount: 1,
+        itemCount: posts.length,
         itemBuilder: (BuildContext context, int index) {
           Map post = posts[index];
           return PostItem(
