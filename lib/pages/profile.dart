@@ -2,14 +2,14 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/svg.dart';
-import 'package:fluttershare/models/user.dart';
-import 'package:fluttershare/pages/edit_profile.dart';
-import 'package:fluttershare/widgets/post.dart';
-import 'package:fluttershare/widgets/post_tile.dart';
-// import 'package:fluttershare/pages/timeline.dart';
-import 'package:fluttershare/widgets/progress.dart';
+import 'package:aaspaas/models/user.dart';
+import 'package:aaspaas/pages/edit_profile.dart';
+import 'package:aaspaas/widgets/post.dart';
+import 'package:aaspaas/widgets/post_tile.dart';
+// import 'package:aaspaas/pages/timeline.dart';
+import 'package:aaspaas/widgets/progress.dart';
 import '../widgets/header.dart';
-import 'package:fluttershare/pages/home.dart';
+import 'package:aaspaas/pages/home.dart';
 
 class Profile extends StatefulWidget {
   final String profileId;
@@ -250,7 +250,7 @@ class _ProfileState extends State<Profile> {
                 children: <Widget>[
                   CircleAvatar(
                     radius: 40.0,
-                    backgroundColor: Colors.grey,
+                    backgroundColor: Colors.red[50],
                     backgroundImage: CachedNetworkImageProvider(user.photoUrl),
                   ),
                   Expanded(
@@ -387,7 +387,12 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: header(context, titleText: "Profile"),
+      backgroundColor: Colors.red[50],
+      appBar: AppBar(
+        elevation: 0,
+        title: Text("Profile", style: TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.w700),),
+        centerTitle: true,
+      ),
       body: ListView(
         children: <Widget>[
           buildProfileHeader(),

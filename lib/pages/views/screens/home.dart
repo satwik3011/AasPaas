@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:social_app_ui/views/widgets/post_item.dart';
-import 'package:social_app_ui/util/data.dart';
+import 'package:aaspaas/pages/views/widgets/post_item.dart';
+import 'package:aaspaas/pages/util/data.dart';
 
 class Home extends StatefulWidget {
   @override

@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttershare/widgets/header.dart';
-import 'package:fluttershare/widgets/progress.dart';
+import 'package:aaspaas/widgets/header.dart';
+import 'package:aaspaas/widgets/progress.dart';
 import 'home.dart';
 import 'package:timeago/timeago.dart' as timeago;
 

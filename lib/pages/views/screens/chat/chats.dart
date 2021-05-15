@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:social_app_ui/views/widgets/chat_item.dart';
-import 'package:social_app_ui/util/data.dart';
+import 'package:aaspaas/pages/views/widgets/chat_item.dart';
+import 'package:aaspaas/pages/util/data.dart';
 
 class Chats extends StatefulWidget {
   @override

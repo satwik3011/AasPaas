@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttershare/pages/views/widgets/post_item.dart';
-import 'package:fluttershare/pages/util/data.dart';
+import 'package:aaspaas/pages/home.dart';
+import 'package:aaspaas/pages/views/widgets/post_item.dart';
+import 'package:aaspaas/pages/util/data.dart';
+import 'package:aaspaas/pages/upload.dart';
 
 class Timeline extends StatefulWidget {
   @override
@@ -10,13 +12,15 @@ class Timeline extends StatefulWidget {
 class _TimelineState extends State<Timeline> {
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
-        title: Text("Feeds"),
+        elevation: 0,
+        title: Text("Feed", style: TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.w700),),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
             icon: Icon(
-              Icons.filter_list,
+              Icons.message,
             ),
             onPressed: () {},
           ),
@@ -40,7 +44,9 @@ class _TimelineState extends State<Timeline> {
           Icons.add,
           color: Colors.white,
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => Upload(currentUser: currentUser)));
+        },
       ),
     );
   }

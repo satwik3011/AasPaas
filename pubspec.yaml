@@ -1,4 +1,4 @@
-name: fluttershare
+name: aaspaas
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -35,6 +35,10 @@ dependencies:
   cached_network_image: ^2.0.0
   flutter_svg: ^0.16.1
   flutter_swiper: ^1.1.6
+  lottie: ^0.6.0
+  flutter_staggered_animations: ^0.1.2
+  persistent_bottom_nav_bar: any
+  bottom_nav: ^0.1.1
 
 dev_dependencies:
   flutter_test:
@@ -50,9 +54,30 @@ flutter:
     - family: Signatra
       fonts:
         - asset: assets/fonts/Signatra.ttf
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-Black.ttf
+        - asset: assets/fonts/Raleway-BlackItalic.ttf
+        - asset: assets/fonts/Raleway-Bold.ttf
+        - asset: assets/fonts/Raleway-BoldItalic.ttf
+        - asset: assets/fonts/Raleway-ExtraBold.ttf
+        - asset: assets/fonts/Raleway-ExtraBoldItalic.ttf
+        - asset: assets/fonts/Raleway-ExtraLight.ttf
+        - asset: assets/fonts/Raleway-ExtraLightItalic.ttf
+        - asset: assets/fonts/Raleway-Italic.ttf
+        - asset: assets/fonts/Raleway-Light.ttf
+        - asset: assets/fonts/Raleway-LightItalic.ttf
+        - asset: assets/fonts/Raleway-Medium.ttf
+        - asset: assets/fonts/Raleway-MediumItalic.ttf
+        - asset: assets/fonts/Raleway-Regular.ttf
+        - asset: assets/fonts/Raleway-SemiBold.ttf
+        - asset: assets/fonts/Raleway-SemiBoldItalic.ttf
+        - asset: assets/fonts/Raleway-Thin.ttf
+        - asset: assets/fonts/Raleway-ThinItalic.ttf
   assets:
     - assets/images/google_signin_button.png
     - assets/images/upload.svg
     - assets/images/search.svg
     - assets/images/activity_feed.svg
     - assets/images/no_content.svg
+    - assets/

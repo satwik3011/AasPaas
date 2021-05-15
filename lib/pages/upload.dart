@@ -4,8 +4,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/svg.dart';
-import 'package:fluttershare/models/user.dart';
-import 'package:fluttershare/widgets/progress.dart';
+import 'package:aaspaas/models/user.dart';
+import 'package:aaspaas/widgets/progress.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
@@ -73,7 +73,7 @@ class _UploadState extends State<Upload>
 
   Container buildSplashScreen() {
     return Container(
-      color: Theme.of(context).accentColor.withOpacity(0.6),
+      color: Colors.red[50],
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -91,7 +91,7 @@ class _UploadState extends State<Upload>
                   fontSize: 22.0,
                 ),
               ),
-              color: Colors.deepOrange,
+              color: Colors.purple[400],
               onPressed: () => selectImage(context),
             ),
           ),

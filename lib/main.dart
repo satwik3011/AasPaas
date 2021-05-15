@@ -15,10 +15,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'FlutterShare',
+      title: 'Aas Paas',
       debugShowCheckedModeBanner: false,
       theme:
-          ThemeData(primarySwatch: Colors.deepPurple, accentColor: Colors.teal),
+          ThemeData(primaryColor: Color(0xff9B51E0), accentColor: Color(0xff9B51E0)),
       home: Home(),
     );
   }

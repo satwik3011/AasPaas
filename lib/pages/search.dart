@@ -2,10 +2,10 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
-import 'package:fluttershare/models/user.dart';
-import 'package:fluttershare/pages/activity_feed.dart';
-import 'package:fluttershare/pages/home.dart';
-import 'package:fluttershare/widgets/progress.dart';
+import 'package:aaspaas/models/user.dart';
+import 'package:aaspaas/pages/activity_feed.dart';
+import 'package:aaspaas/pages/home.dart';
+import 'package:aaspaas/widgets/progress.dart';
 
 class Search extends StatefulWidget {
   @override
@@ -32,19 +32,22 @@ class _SearchState extends State<Search>
 
   AppBar buildSearchField() {
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xff9B51E0),
       title: TextFormField(
         controller: searchController,
         decoration: InputDecoration(
           hintText: "Search for a user...",
+          hintStyle: TextStyle(color: Colors.red[50], fontFamily: 'Raleway', fontWeight: FontWeight.w600),
           filled: true,
           prefixIcon: Icon(
             Icons.account_box,
             size: 28.0,
+            color: Colors.red[50],
           ),
           suffixIcon: IconButton(
             icon: Icon(Icons.clear),
             onPressed: clearSearch,
+            color: Colors.red[50],
           ),
         ),
         onFieldSubmitted: handleSearch,
@@ -67,10 +70,10 @@ class _SearchState extends State<Search>
               "Find Users",
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
-                fontStyle: FontStyle.italic,
+                color: Colors.purple[400],
+                fontFamily: 'Raleway',
                 fontWeight: FontWeight.w600,
-                fontSize: 60.0,
+                fontSize: 40.0,
               ),
             ),
           ],
@@ -105,7 +108,7 @@ class _SearchState extends State<Search>
     super.build(context);
 
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor.withOpacity(0.8),
+      backgroundColor: Colors.red[50],
       appBar: buildSearchField(),
       body:
           searchResultsFuture == null ? buildNoContent() : buildSearchResults(),

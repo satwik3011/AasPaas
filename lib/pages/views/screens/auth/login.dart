@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:social_app_ui/util/animations.dart';
-import 'package:social_app_ui/util/const.dart';
-import 'package:social_app_ui/util/enum.dart';
-import 'package:social_app_ui/util/router.dart';
-import 'package:social_app_ui/util/validations.dart';
-import 'package:social_app_ui/views/screens/main_screen.dart';
-import 'package:social_app_ui/views/widgets/custom_button.dart';
-import 'package:social_app_ui/views/widgets/custom_text_field.dart';
-import 'package:social_app_ui/util/extensions.dart';
+import 'package:aaspaas/pages/util/animations.dart';
+import 'package:aaspaas/pages/util/const.dart';
+import 'package:aaspaas/pages/util/enum.dart';
+import 'package:aaspaas/pages/util/router.dart';
+import 'package:aaspaas/pages/util/validations.dart';
+import 'package:aaspaas/pages/views/screens/main_screen.dart';
+import 'package:aaspaas/pages/views/widgets/custom_button.dart';
+import 'package:aaspaas/pages/views/widgets/custom_text_field.dart';
+import 'package:aaspaas/pages/util/extensions.dart';
 class Login extends StatefulWidget {
   @override
   _LoginState createState() => _LoginState();

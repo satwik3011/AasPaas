@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:aaspaas/pages/views/widgets/post_data.dart';
 
 class PostItem extends StatefulWidget {
   final String dp;
@@ -25,48 +26,16 @@ class _PostItemState extends State<PostItem> {
       padding: EdgeInsets.symmetric(vertical: 5),
       child: InkWell(
         child: Column(
-          // children: <Widget>[
-          //   ListTile(
-          //     leading: CircleAvatar(
-          //       backgroundImage: AssetImage(
-          //         "${widget.dp}",
-          //       ),
-          //     ),
-
-          //     contentPadding: EdgeInsets.all(0),
-          //     title: Text(
-          //       "${widget.name}",
-          //       style: TextStyle(
-          //         fontWeight: FontWeight.bold,
-          //       ),
-          //     ),
-          //     trailing: Text(
-          //       "${widget.time}",
-          //       style: TextStyle(
-          //         fontWeight: FontWeight.w300,
-          //         fontSize: 11,
-          //       ),
-          //     ),
-          //   ),
-
-          //   Image.asset(
-          //     "${widget.img}",
-          //     height: 170,
-          //     width: MediaQuery.of(context).size.width,
-          //     fit: BoxFit.cover,
-          //   ),
-
-          // ],
           children: <Widget>[
             Container(
-              height: 800,
-              padding: const EdgeInsets.only(left: 32),
+              height: 530,
+              padding: const EdgeInsets.only(left: 17, top: 100),
               child: Swiper(
-                itemCount: 1,
-                itemWidth: MediaQuery.of(context).size.width - 2 * 64,
+                itemCount: posts.length,
+                itemWidth: MediaQuery.of(context).size.width - 2 * 40,
                 layout: SwiperLayout.STACK,
                 pagination: SwiperPagination(
-                  builder: DotSwiperPaginationBuilder(activeSize: 20, space: 1),
+                  builder: SwiperPagination.dots,
                 ),
                 itemBuilder: (context, index) {
                   return InkWell(
@@ -80,38 +49,98 @@ class _PostItemState extends State<PostItem> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(32),
                               ),
-                              color: Colors.white,
+                              color: Colors.blueGrey[50],
                               child: Padding(
                                 padding: const EdgeInsets.all(32.0),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
-                                      'HI ASSTHARVDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD',
+                                      posts[index].description,
+                                      maxLines: 4,
+                                      overflow: TextOverflow.ellipsis,
+                                      softWrap: false,
                                       style: TextStyle(
-                                        fontFamily: 'Avenir',
-                                        fontSize: 35,
+                                        fontFamily: 'Raleway',
+                                        fontSize: 30,
                                         color: const Color(0xff47455f),
-                                        fontWeight: FontWeight.w900,
+                                        fontWeight: FontWeight.w600,
                                       ),
                                       textAlign: TextAlign.left,
                                     ),
-                                    SizedBox(height: 32),
+                                    SizedBox(height: 30),
                                     Row(
+                                      children: [
+                                        CircleAvatar(
+                                          backgroundImage:
+                                              AssetImage(posts[index].photo),
+                                          backgroundColor: Colors.white,
+                                        ),
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              posts[index].name,
+                                              textAlign: TextAlign.start,
+                                              style: TextStyle(
+                                                fontFamily: 'Raleway',
+                                                fontSize: 20,
+                                                color: const Color(0xff47455f),
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  Icons.location_on,
+                                                  color: Colors.blueGrey[800],
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Text(
+                                                  posts[index].location,
+                                                  textAlign: TextAlign.start,
+                                                  style: TextStyle(
+                                                    fontFamily: 'Raleway',
+                                                    fontSize: 17,
+                                                    color:
+                                                        const Color(0xff47455f),
+                                                    fontWeight: FontWeight.w400,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 38),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: <Widget>[
                                         Text(
-                                          'Next',
+                                          'Answer',
                                           style: TextStyle(
-                                            fontFamily: 'Avenir',
-                                            fontSize: 18,
-                                            color: Color(0xFFE4979E),
-                                            fontWeight: FontWeight.w500,
+                                            fontFamily: 'Raleway',
+                                            fontSize: 27,
+                                            color: Colors.lightGreen[600],
+                                            fontWeight: FontWeight.w600,
                                           ),
                                           textAlign: TextAlign.left,
                                         ),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
                                         Icon(
-                                          Icons.arrow_forward,
-                                          color: Color(0xFFE4979E),
+                                          Icons.message,
+                                          color: Colors.lightGreen,
+                                          size: 30,
                                         ),
                                       ],
                                     ),
@@ -121,7 +150,6 @@ class _PostItemState extends State<PostItem> {
                             ),
                           ],
                         ),
-                        // Image.asset(topics[index].iconImage, height: 200, width: 200,),
                       ],
                     ),
                   );

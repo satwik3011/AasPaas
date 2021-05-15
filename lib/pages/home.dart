@@ -4,10 +4,11 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttershare/models/user.dart';
-import 'package:fluttershare/pages/create_account.dart';
-import 'package:fluttershare/pages/timeline.dart';
+import 'package:aaspaas/models/user.dart';
+import 'package:aaspaas/pages/create_account.dart';
+import 'package:aaspaas/pages/timeline.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:bottom_nav/bottom_nav.dart';
 
 import 'activity_feed.dart';
 import 'profile.dart';
@@ -180,10 +181,9 @@ class _HomeState extends State<Home> {
       body: PageView(
         children: <Widget>[
           Timeline(
-            // currentUser: currentUser
-            ),
+              // currentUser: currentUser
+              ),
           ActivityFeed(),
-          Upload(currentUser: currentUser),
           Search(),
           Profile(profileId: currentUser?.id),
         ],
@@ -191,29 +191,22 @@ class _HomeState extends State<Home> {
         onPageChanged: onPageChanged,
         physics: NeverScrollableScrollPhysics(),
       ),
-      bottomNavigationBar: CupertinoTabBar(
-        currentIndex: pageIndex,
-        onTap: onTap,
-        activeColor: Theme.of(context).primaryColor,
+      bottomNavigationBar: BottomNav(
+        index: pageIndex,
+        backgroundColor: Color(0xff9B51E0),
+        showElevation: true,
+        navBarHeight: 65.0,
+        radius: 40.0,
+        onTap: onTap, 
         items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.whatshot),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_active),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.photo_camera,
-              size: 35.0,
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-          ),
+          BottomNavItem(
+              icon: Icons.home, label: "Home", selectedColor: Colors.red[50], ),
+          BottomNavItem(
+              icon: Icons.favorite, label: "Likes", selectedColor: Colors.red[50]),
+          BottomNavItem(
+              icon: Icons.search, label: "Search", selectedColor: Colors.red[50]),
+          BottomNavItem(
+              icon: Icons.person, label: "Profile", selectedColor: Colors.red[50]),
         ],
       ),
     );
@@ -221,6 +214,7 @@ class _HomeState extends State<Home> {
 
   Scaffold buildUnAuthScreen() {
     return Scaffold(
+      backgroundColor: Colors.red[50],
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -238,15 +232,15 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
-              'FlutterShare',
+              'AasPaas',
               style: TextStyle(
                 fontFamily: "Signatra",
                 fontSize: 90.0,
                 color: Colors.white,
               ),
             ),
-            GestureDetector(
-              onTap: login(),
+            FlatButton(
+              onPressed: login(),
               child: Container(
                 width: 260.0,
                 height: 60.0,

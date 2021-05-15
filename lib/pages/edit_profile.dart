@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import "package:flutter/material.dart";
-import 'package:fluttershare/models/user.dart';
-// import 'package:fluttershare/pages/timeline.dart';
-import 'package:fluttershare/widgets/progress.dart';
+import 'package:aaspaas/models/user.dart';
+// import 'package:aaspaas/pages/timeline.dart';
+import 'package:aaspaas/widgets/progress.dart';
 import 'home.dart';
 // import 'profile.dart';
 

@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:social_app_ui/views/widgets/chat_bubble.dart';
-import 'package:social_app_ui/util/data.dart';
+import 'package:aaspaas/pages/views/widgets/chat_bubble.dart';
+import 'package:aaspaas/pages/util/data.dart';
 
 class Conversation extends StatefulWidget {
   @override
