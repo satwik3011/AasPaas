@@ -1,8 +1,6 @@
 // import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:aaspaas/pages/create_account.dart';
 import 'package:flutter/material.dart';
 import 'pages/home.dart';
-import 'package:aaspaas/pages/upload.dart';
 
 void main() {
   // Firestore.instance.settings().then((_) {

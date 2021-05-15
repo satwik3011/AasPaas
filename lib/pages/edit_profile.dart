@@ -119,12 +119,14 @@ class _EditProfileState extends State<EditProfile> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xff9B51E0),
         title: Center(
           child: Text(
             "Edit Profile",
             style: TextStyle(
-              color: Colors.black,
+              color: Colors.white,
+              fontFamily: 'Raleway',
+              fontWeight: FontWeight.bold,
             ),
           ),
         ),
@@ -134,7 +136,7 @@ class _EditProfileState extends State<EditProfile> {
               icon: Icon(
                 Icons.done,
                 size: 30.0,
-                color: Colors.green,
+                color: Colors.white,
               ))
         ],
       ),
@@ -161,29 +163,40 @@ class _EditProfileState extends State<EditProfile> {
                         child: Column(
                           children: <Widget>[
                             buildDisplayNameField(),
-                            buildBioField(),
                           ],
                         ),
                       ),
-                      RaisedButton(
-                        onPressed: updateProfileData,
-                        child: Text(
-                          "Update Profile",
-                          style: TextStyle(
-                            color: Theme.of(context).primaryColor,
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                      GestureDetector(
+                        onTap: updateProfileData,
+                        child: Container(
+                            height: 50.0,
+                            width: 200.0,
+                            decoration: BoxDecoration(
+                              color: Colors.greenAccent[400],
+                              borderRadius: BorderRadius.circular(7.0),
+                            ),
+                            child: Center(
+                              child: Text(
+                                "Update Profile",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20.0,
+                                    fontFamily: 'Raleway',
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            )),
                       ),
                       Padding(
-                        padding: EdgeInsets.all(16.0),
+                        padding: EdgeInsets.all(5.0),
                         child: FlatButton.icon(
                           onPressed: logout,
                           icon: Icon(Icons.cancel, color: Colors.red),
                           label: Text(
                             "Logout",
-                            style: TextStyle(color: Colors.red, fontSize: 20.0),
+                            style: TextStyle(color: Colors.red,
+                            fontFamily: 'Raleway', 
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w600),
                           ),
                         ),
                       ),
