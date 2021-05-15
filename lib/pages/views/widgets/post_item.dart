@@ -49,7 +49,7 @@ class _PostItemState extends State<PostItem> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(32),
                               ),
-                              color: Colors.blueGrey[50],
+                              color: Colors.white,
                               child: Padding(
                                 padding: const EdgeInsets.all(32.0),
                                 child: Column(

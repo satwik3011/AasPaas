@@ -31,20 +31,38 @@ class _CreateAccountState extends State<CreateAccount> {
   Widget build(BuildContext parentContext) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: header(context,
-          titleText: "Set up your profile", removeBackButton: true),
+      appBar: AppBar(
+        elevation: 0,
+        title: Text(
+          "Set up your Profile",
+          style: TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.w700),
+        ),
+        centerTitle: true,
+      ),
       body: ListView(
         children: <Widget>[
           Container(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
+                SizedBox(height: 50),
+                Center(
+                  child: Image(
+                    height: 250,
+                    image: AssetImage("assets/delivery_1.png"),
+                  ),
+                ),
+                SizedBox(height: 50),
                 Padding(
-                  padding: EdgeInsets.only(top: 25.0),
-                  child: Center(
-                    child: Text(
-                      "Create a username",
-                      style: TextStyle(fontSize: 25.0),
+                  padding: EdgeInsets.only(top: 25.0, left: 20),
+                  child: Text(
+                    "Create a username",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontFamily: 'Raleway',
+                      fontWeight: FontWeight.w500,
                     ),
+                    textAlign: TextAlign.left,
                   ),
                 ),
                 Padding(
@@ -67,30 +85,33 @@ class _CreateAccountState extends State<CreateAccount> {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             labelText: "Username",
-                            labelStyle: TextStyle(fontSize: 15.0),
+                            labelStyle: TextStyle(fontSize: 15.0, fontFamily: 'Raleway', fontWeight: FontWeight.w400),
                             hintText: "Must be at least 3 characters",
                           ),
                         )),
                   ),
                 ),
-                GestureDetector(
-                  onTap: submit,
-                  child: Container(
-                      height: 50.0,
-                      width: 350.0,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(7.0),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Submit",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.bold),
+                Center(
+                  child: GestureDetector(
+                    onTap: submit,
+                    child: Container(
+                        height: 50.0,
+                        width: 300.0,
+                        decoration: BoxDecoration(
+                          color: Colors.greenAccent[400],
+                          borderRadius: BorderRadius.circular(7.0),
                         ),
-                      )),
+                        child: Center(
+                          child: Text(
+                            "Submit",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 15.0,
+                                fontFamily: 'Raleway',
+                                fontWeight: FontWeight.bold),
+                          ),
+                        )),
+                  ),
                 )
               ],
             ),

@@ -37,17 +37,17 @@ class _SearchState extends State<Search>
         controller: searchController,
         decoration: InputDecoration(
           hintText: "Search for a user...",
-          hintStyle: TextStyle(color: Colors.red[50], fontFamily: 'Raleway', fontWeight: FontWeight.w600),
+          hintStyle: TextStyle(color: Colors.blue[50], fontFamily: 'Raleway', fontWeight: FontWeight.w600),
           filled: true,
           prefixIcon: Icon(
             Icons.account_box,
             size: 28.0,
-            color: Colors.red[50],
+            color: Colors.blue[50],
           ),
           suffixIcon: IconButton(
             icon: Icon(Icons.clear),
             onPressed: clearSearch,
-            color: Colors.red[50],
+            color: Colors.blue[50],
           ),
         ),
         onFieldSubmitted: handleSearch,
@@ -56,14 +56,14 @@ class _SearchState extends State<Search>
   }
 
   Container buildNoContent() {
-    final Orientation orientation = MediaQuery.of(context).orientation;
+    // final Orientation orientation = MediaQuery.of(context).orientation;
     return Container(
       child: Center(
         child: ListView(
           shrinkWrap: true,
           children: <Widget>[
             // SvgPicture.asset(
-            //   'assets/images/search.svg',
+            //   'assets/images/search.svg',s
             //   height: orientation == Orientation.portrait ? 300.0 : 150.0,
             // ),
             Text(
@@ -108,7 +108,7 @@ class _SearchState extends State<Search>
     super.build(context);
 
     return Scaffold(
-      backgroundColor: Colors.red[50],
+      backgroundColor: Colors.blue[50],
       appBar: buildSearchField(),
       body:
           searchResultsFuture == null ? buildNoContent() : buildSearchResults(),

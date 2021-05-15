@@ -12,7 +12,7 @@ class Timeline extends StatefulWidget {
 class _TimelineState extends State<Timeline> {
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.blue[50],
       appBar: AppBar(
         elevation: 0,
         title: Text("Feed", style: TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.w700),),

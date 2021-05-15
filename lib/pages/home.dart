@@ -13,7 +13,6 @@ import 'package:bottom_nav/bottom_nav.dart';
 import 'activity_feed.dart';
 import 'profile.dart';
 import 'search.dart';
-import 'upload.dart';
 
 final GoogleSignIn googleSignIn = GoogleSignIn();
 final StorageReference storageRef = FirebaseStorage.instance.ref();
@@ -200,13 +199,13 @@ class _HomeState extends State<Home> {
         onTap: onTap, 
         items: [
           BottomNavItem(
-              icon: Icons.home, label: "Home", selectedColor: Colors.red[50], ),
+              icon: Icons.home, label: "Home", selectedColor: Colors.blue[50], ),
           BottomNavItem(
-              icon: Icons.favorite, label: "Likes", selectedColor: Colors.red[50]),
+              icon: Icons.favorite, label: "Likes", selectedColor: Colors.blue[50]),
           BottomNavItem(
-              icon: Icons.search, label: "Search", selectedColor: Colors.red[50]),
+              icon: Icons.search, label: "Search", selectedColor: Colors.blue[50]),
           BottomNavItem(
-              icon: Icons.person, label: "Profile", selectedColor: Colors.red[50]),
+              icon: Icons.person, label: "Profile", selectedColor: Colors.blue[50]),
         ],
       ),
     );
@@ -214,7 +213,7 @@ class _HomeState extends State<Home> {
 
   Scaffold buildUnAuthScreen() {
     return Scaffold(
-      backgroundColor: Colors.red[50],
+      backgroundColor: Colors.blue[50],
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(

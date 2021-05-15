@@ -3,7 +3,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:aaspaas/pages/post_screen.dart';
 import 'package:aaspaas/pages/profile.dart';
-import 'package:aaspaas/widgets/header.dart';
 import 'package:aaspaas/widgets/progress.dart';
 import 'home.dart';
 import 'package:timeago/timeago.dart' as timeago;
@@ -32,7 +31,7 @@ class _ActivityFeedState extends State<ActivityFeed> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red[50],
+      backgroundColor: Colors.blue[50],
       appBar: AppBar(
         elevation: 0,
         title: Text("Activity Feed", style: TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.w700),),

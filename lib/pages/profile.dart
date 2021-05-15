@@ -8,7 +8,6 @@ import 'package:aaspaas/widgets/post.dart';
 import 'package:aaspaas/widgets/post_tile.dart';
 // import 'package:aaspaas/pages/timeline.dart';
 import 'package:aaspaas/widgets/progress.dart';
-import '../widgets/header.dart';
 import 'package:aaspaas/pages/home.dart';
 
 class Profile extends StatefulWidget {
@@ -387,7 +386,7 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red[50],
+      backgroundColor: Colors.blue[50],
       appBar: AppBar(
         elevation: 0,
         title: Text("Profile", style: TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.w700),),

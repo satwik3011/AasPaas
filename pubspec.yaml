@@ -39,6 +39,7 @@ dependencies:
   flutter_staggered_animations: ^0.1.2
   persistent_bottom_nav_bar: any
   bottom_nav: ^0.1.1
+  flutter_awesome_buttons: ^0.1.0
 
 dev_dependencies:
   flutter_test:

@@ -73,28 +73,58 @@ class _UploadState extends State<Upload>
 
   Container buildSplashScreen() {
     return Container(
-      color: Colors.red[50],
+      color: Colors.blue[50],
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          // SvgPicture.asset('assets/images/upload.svg', height: 260.0),
-          Padding(
-            padding: EdgeInsets.only(top: 20.0),
-            child: RaisedButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-              child: Text(
-                "Upload Image",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22.0,
-                ),
-              ),
-              color: Colors.purple[400],
-              onPressed: () => selectImage(context),
+          SizedBox(height: 50),
+          Center(
+            child: Image(
+              height: 250,
+              image: AssetImage("assets/coding.png"),
             ),
           ),
+          SizedBox(height: 20),
+          Center(
+            child: GestureDetector(
+              onTap: () => selectImage(context),
+              child: Container(
+                  height: 50.0,
+                  width: 200.0,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent[400],
+                    borderRadius: BorderRadius.circular(7.0),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Upload Image",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontFamily: 'Raleway',
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+            ),
+          ),
+          // Padding(
+          //   padding: EdgeInsets.only(top: 20.0),
+          //   child: RaisedButton(
+          //     shape: RoundedRectangleBorder(
+          //       borderRadius: BorderRadius.circular(8.0),
+          //     ),
+          //     child: Text(
+          //       "Upload Image",
+          //       style: TextStyle(
+          //         color: Colors.blue[50],
+          //         fontSize: 22.0,
+          //       ),
+          //     ),
+          //     color: Colors.purple[400],
+          //     onPressed: () => selectImage(context),
+          //   ),
+          // ),
         ],
       ),
     );
@@ -163,14 +193,15 @@ class _UploadState extends State<Upload>
 
   buildploadForm() {
     return Scaffold(
+      backgroundColor: Colors.blue[50],
       appBar: AppBar(
-        backgroundColor: Colors.white70,
+        backgroundColor: Color(0xff9B51E0),
         leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
+            icon: Icon(Icons.arrow_back, color: Colors.white),
             onPressed: clearImage),
         title: Text(
-          "Caption Post",
-          style: TextStyle(color: Colors.black),
+          "Post Details",
+          style: TextStyle(color: Colors.white),
         ),
         actions: [
           FlatButton(
@@ -178,7 +209,7 @@ class _UploadState extends State<Upload>
             child: Text(
               "Post",
               style: TextStyle(
-                  color: Colors.blueAccent,
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0),
             ),
@@ -217,7 +248,9 @@ class _UploadState extends State<Upload>
               child: TextField(
                 controller: captionController,
                 decoration: InputDecoration(
-                    hintText: "Write a caption...", border: InputBorder.none),
+                    hintText: "What do you want to ask?", border: InputBorder.none,
+                    hintStyle: TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.w500),
+                  ),
               ),
             ),
           ),
@@ -225,7 +258,7 @@ class _UploadState extends State<Upload>
           ListTile(
             leading: Icon(
               Icons.pin_drop,
-              color: Colors.orange,
+              color: Color(0xff9B51E0),
               size: 35.0,
             ),
             title: Container(
@@ -234,6 +267,7 @@ class _UploadState extends State<Upload>
                 controller: locationController,
                 decoration: InputDecoration(
                   hintText: "Where was this photo taken?",
+                  hintStyle: TextStyle(fontFamily: 'Raleway', fontWeight: FontWeight.w500),
                   border: InputBorder.none,
                 ),
               ),
@@ -246,12 +280,12 @@ class _UploadState extends State<Upload>
             child: RaisedButton.icon(
                 label: Text(
                   "Use Current Location",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontFamily: 'Raleway', fontWeight: FontWeight.w700),
                 ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0),
                 ),
-                color: Colors.blue,
+                color: Color(0xff9B51E0),
                 onPressed: getUserLocation,
                 icon: Icon(
                   Icons.my_location,
