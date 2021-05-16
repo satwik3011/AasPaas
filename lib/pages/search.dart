@@ -19,7 +19,7 @@ class _SearchState extends State<Search>
 
   handleSearch(String query) {
     Future<QuerySnapshot> users = usersRef
-        .where("displayName", isGreaterThanOrEqualTo: query)
+        .where("displayName".toUpperCase(), isGreaterThanOrEqualTo: query)
         .getDocuments();
     setState(() {
       searchResultsFuture = users;

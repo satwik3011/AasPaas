@@ -3,6 +3,7 @@ import 'package:aaspaas/pages/home.dart';
 import 'package:aaspaas/pages/views/widgets/post_item.dart';
 import 'package:aaspaas/pages/util/data.dart';
 import 'package:aaspaas/pages/upload.dart';
+import 'package:aaspaas/pages/chat_page.dart';
 
 class Timeline extends StatefulWidget {
   @override
@@ -22,7 +23,9 @@ class _TimelineState extends State<Timeline> {
             icon: Icon(
               Icons.message,
             ),
-            onPressed: () {},
+            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context){
+          return ChatPage();
+        }));},
           ),
         ],
       ),

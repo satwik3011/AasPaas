@@ -364,8 +364,8 @@ class _PostState extends State<Post> {
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         buildPostHeader(),
-        buildPostImage(),
         buildPostFooter(),
+        buildPostImage(),
       ],
     );
   }

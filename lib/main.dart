@@ -1,6 +1,7 @@
 // import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'pages/home.dart';
+import 'pages/chat_page.dart';
 
 void main() {
   // Firestore.instance.settings().then((_) {

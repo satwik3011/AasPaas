@@ -201,7 +201,7 @@ class _HomeState extends State<Home> {
           BottomNavItem(
               icon: Icons.home, label: "Home", selectedColor: Colors.blue[50], ),
           BottomNavItem(
-              icon: Icons.favorite, label: "Likes", selectedColor: Colors.blue[50]),
+              icon: Icons.notifications, label: "Activity", selectedColor: Colors.blue[50]),
           BottomNavItem(
               icon: Icons.search, label: "Search", selectedColor: Colors.blue[50]),
           BottomNavItem(
