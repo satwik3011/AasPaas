@@ -5,7 +5,7 @@
 
 
 ## Inspiration
-> Time and again we have observed an on-the-spot need for borrowing daily devices, enquiring about essential services, and local businesses/stores. Proper advice for such small queries is rarely available on the web, and this is where a community helps. A forum/social network for a neighborhood can aid users to identify new local stores around them and get instant help regarding essential services. This not only makes the community engaging and accommodating but also supports local vendors and professionals.
+Time and again we have observed an on-the-spot need for borrowing daily devices, enquiring about essential services, and local businesses/stores. Proper advice for such small queries is rarely available on the web, and this is where a community helps. A forum/social network for a neighborhood can aid users to identify new local stores around them and get instant help regarding essential services. This not only makes the community engaging and accommodating but also supports local vendors and professionals.
 
 ## What it does
 **Aas Paas** is a **neighborhood-friendly application** that aims to create strong community bonds and support local businesses. The application is a platform for all the users in the vicinity to help each other with queries like the need for some supplies, services, or professionals. Aas Paas acts as a community social network, with built-in features for conversing with neighbors and following their activity. Our project supports local businesses, essential service providers and in turn benefits every user.
@@ -38,14 +38,14 @@ Future Prospects for our application are extensive. Some are -
 👤 **Satwik Dudeja**
 
 * Website: satwikdudeja@gmail.com
-* Github: [@atharvjairath](https://github.com/satwik3011)
-* LinkedIn: [@Atharvjairath](https://www.linkedin.com/in/satwikdudeja/)
+* Github: [@satwik3011](https://github.com/satwik3011)
+* LinkedIn: [@SatwikDudeja](https://www.linkedin.com/in/satwikdudeja/)
 
 👤 **Ishaan Bajaj**
 
-* Website: atharv.jairath@gmail.com
-* Github: [@atharvjairath](https://github.com/atharvjairath)
-* LinkedIn: [@Atharvjairath](https://www.linkedin.com/in/atharv-jairath-99aa78118/)
+* Website: ishaanbajaj90@gmail.com
+* Github: [@ishaanbajaj30](https://github.com/ishaanbajaj30)
+* LinkedIn: [@IshaanBajaj](https://www.linkedin.com/in/ishaan-bajaj-159b191b6/)
 
 👤 **Arunim Gupta**
 
@@ -61,23 +61,23 @@ Future Prospects for our application are extensive. Some are -
 # Fork using GitHub official command line
 # If you don't have the GitHub CLI, use the web site to do that.
 
-$ gh repo fork EliasGcf/NOME_DO_REPO
+$ gh repo fork satwik3011/AasPaas
 ```
 
 **Follow the steps below**
 
 ```bash
 # Clone your fork
-$ git clone your-fork-url && cd NOME_DO_REPO
+$ git clone your-fork-url
 
 # Create a branch with your feature
-$ git checkout -b my-feature
+$ git checkout -b master
 
 # Make the commit with your changes
 $ git commit -m 'feat: My new feature'
 
 # Send the code to your remote branch
-$ git push origin my-feature
+$ git push origin master
 ```
 
 After your pull request is merged, you can delete your branch
