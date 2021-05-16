@@ -8,10 +8,10 @@ class ChatDetailPage extends StatefulWidget {
 
 class _ChatDetailPageState extends State<ChatDetailPage> {
   List<ChatMessage> messages = [
-    ChatMessage(messageContent: "Hello, Will", messageType: "receiver"),
+    ChatMessage(messageContent: "Hello, Ishaan", messageType: "receiver"),
     ChatMessage(messageContent: "How have you been?", messageType: "receiver"),
     ChatMessage(
-        messageContent: "Hey Kriss, I am doing fine.",
+        messageContent: "Hey Bhavya, I am doing fine.",
         messageType: "sender"),
         ChatMessage(
         messageContent: "Do you still have that therapist's contact?",
@@ -19,6 +19,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
     ChatMessage(messageContent: "Yes, I do. Is everything fine?", messageType: "receiver"),
     ChatMessage(
         messageContent: "Yes I just needed it for someone else.", messageType: "sender"),
+    ChatMessage(messageContent: "Address?", messageType: "receiver"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -47,7 +48,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                 ),
                 CircleAvatar(
                   backgroundImage: NetworkImage(
-                      "<https://randomuser.me/api/portraits/men/5.jpg>"),
+                      "https://lh3.googleusercontent.com/a-/AOh14Ggv3EWdMFE0_bNRuMEnGPJZ-AjBVp4L5th7-xvfMg=s96-c"),
                   maxRadius: 20,
                 ),
                 SizedBox(
@@ -59,7 +60,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        "Kriss Benwat",
+                        "Bhavya Khandelwal",
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w600),
                       ),

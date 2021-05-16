@@ -12,18 +12,18 @@ class _ChatPageState extends State<ChatPage> {
   List<ChatUsers> chatUsers = [
     ChatUsers(
         name: "Bhavya",
-        messageText: "Hi!, Address?",
-        imageURL: "images/userImage1.jpeg",
+        messageText: "Address?",
+        imageURL: "https://lh3.googleusercontent.com/a-/AOh14Ggv3EWdMFE0_bNRuMEnGPJZ-AjBVp4L5th7-xvfMg=s96-c",
         time: "Now"),
     ChatUsers(
         name: "Ishaan Bajaj",
         messageText: "Thank you!",
-        imageURL: "images/userImage2.jpeg",
+        imageURL: "https://lh3.googleusercontent.com/a-/AOh14GhR1qg9OKG9zqLsY_qSTKIp1aLxWc42yTPGvw5l9eI=s96-c",
         time: "Yesterday"),
     ChatUsers(
         name: "Atharv Jairath",
         messageText: "Will check that place out!",
-        imageURL: "images/userImage3.jpeg",
+        imageURL: "https://lh3.googleusercontent.com/a-/AOh14GimYmfxjyVhkyags-cPXU89M7YrR7p8lIrOncB55kc=s96-c",
         time: "14 May"),
   ];
   Widget build(BuildContext context) {
@@ -108,7 +108,7 @@ class _ChatPageState extends State<ChatPage> {
                   messageText: chatUsers[index].messageText,
                   imageUrl: chatUsers[index].imageURL,
                   time: chatUsers[index].time,
-                  isMessageRead: (index == 0 || index == 3) ? true : false,
+                  isMessageRead: (index == 0) ? true : false,
                 );
               },
             ),

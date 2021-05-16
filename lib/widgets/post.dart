@@ -268,25 +268,72 @@ class _PostState extends State<Post> {
   buildPostImage() {
     return GestureDetector(
       onDoubleTap: handleLikePost,
-      child: Stack(
-        alignment: Alignment.center,
-        children: <Widget>[
-          cachedNetworkImage(mediaUrl),
-          showHeart
-              ? Animator(
-                  duration: Duration(milliseconds: 300),
-                  tween: Tween(begin: 0.8, end: 1.4),
-                  curve: Curves.elasticOut,
-                  cycles: 0,
-                  builder: (anim) => Transform.scale(
-                      scale: anim.value,
-                      child: Icon(
-                        Icons.favorite,
-                        size: 80.0,
-                        color: Colors.red,
-                      )),
-                )
-              : Text(""),
+      child: Column(
+        children: [
+          Stack(
+            alignment: Alignment.center,
+            children: <Widget>[
+              cachedNetworkImage(mediaUrl),
+              showHeart
+                  ? Animator(
+                      duration: Duration(milliseconds: 300),
+                      tween: Tween(begin: 0.8, end: 1.4),
+                      curve: Curves.elasticOut,
+                      cycles: 0,
+                      builder: (anim) => Transform.scale(
+                          scale: anim.value,
+                          child: Icon(
+                            Icons.favorite,
+                            size: 80.0,
+                            color: Colors.red,
+                          )),
+                    )
+                  : Text(""),
+            ],
+          ),
+          SizedBox(height:8),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Padding(padding: EdgeInsets.only(top: 40.0, left: 20.0)),
+              GestureDetector(
+                onTap: handleLikePost,
+                child: Icon(
+                  isLiked ? Icons.favorite : Icons.favorite_border,
+                  size: 28.0,
+                  color: Colors.pink,
+                ),
+              ),
+              Padding(padding: EdgeInsets.only(right: 20.0)),
+              GestureDetector(
+                onTap: () => showComments(
+                  context,
+                  postId: postId,
+                  ownerId: ownerId,
+                  mediaUrl: mediaUrl,
+                ),
+                child: Icon(
+                  Icons.chat,
+                  size: 28.0,
+                  color: Colors.blue[900],
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(left: 20.0),
+                child: Text(
+                  "$likeCount replies",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              )
+            ],
+          ),
         ],
       ),
     );
@@ -296,61 +343,22 @@ class _PostState extends State<Post> {
     return Column(
       children: <Widget>[
         Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Padding(padding: EdgeInsets.only(top: 40.0, left: 20.0)),
-            GestureDetector(
-              onTap: handleLikePost,
-              child: Icon(
-                isLiked ? Icons.favorite : Icons.favorite_border,
-                size: 28.0,
-                color: Colors.pink,
-              ),
-            ),
-            Padding(padding: EdgeInsets.only(right: 20.0)),
-            GestureDetector(
-              onTap: () => showComments(
-                context,
-                postId: postId,
-                ownerId: ownerId,
-                mediaUrl: mediaUrl,
-              ),
-              child: Icon(
-                Icons.chat,
-                size: 28.0,
-                color: Colors.blue[900],
-              ),
-            ),
-          ],
-        ),
-        Row(
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(left: 20.0),
-              child: Text(
-                "$likeCount likes",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            )
-          ],
-        ),
-        Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
-              margin: EdgeInsets.only(left: 20.0),
+              margin: EdgeInsets.only(left: 10.0),
               child: Text(
-                "$username ",
+                description,
                 style: TextStyle(
+                  fontFamily: 'Raleway',
                   color: Colors.black,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 20,
                 ),
               ),
             ),
-            Expanded(child: Text(description))
+            // Expanded(child: Text(description)),
+            SizedBox(height: 40)
           ],
         ),
       ],
@@ -366,6 +374,7 @@ class _PostState extends State<Post> {
         buildPostHeader(),
         buildPostFooter(),
         buildPostImage(),
+        SizedBox(height: 20)
       ],
     );
   }

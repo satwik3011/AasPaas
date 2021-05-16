@@ -19,7 +19,7 @@ class _SearchState extends State<Search>
 
   handleSearch(String query) {
     Future<QuerySnapshot> users = usersRef
-        .where("displayName".toUpperCase(), isGreaterThanOrEqualTo: query)
+        .where("displayName", isGreaterThanOrEqualTo: query.toUpperCase())
         .getDocuments();
     setState(() {
       searchResultsFuture = users;
@@ -62,10 +62,12 @@ class _SearchState extends State<Search>
         child: ListView(
           shrinkWrap: true,
           children: <Widget>[
-            // SvgPicture.asset(
-            //   'assets/images/search.svg',s
-            //   height: orientation == Orientation.portrait ? 300.0 : 150.0,
-            // ),
+            Center(
+            child: Image(
+              height: 250,
+              image: AssetImage("assets/coding.png"),
+            ),
+            ),
             Text(
               "Find Users",
               textAlign: TextAlign.center,

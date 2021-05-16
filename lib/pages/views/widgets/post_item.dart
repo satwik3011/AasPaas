@@ -73,7 +73,7 @@ class _PostItemState extends State<PostItem> {
                                       children: [
                                         CircleAvatar(
                                           backgroundImage:
-                                              AssetImage(posts[index].photo),
+                                              NetworkImage(posts[index].photo),
                                           backgroundColor: Colors.white,
                                         ),
                                         SizedBox(
