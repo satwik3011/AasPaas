@@ -49,7 +49,7 @@ Future Prospects for our application are extensive. Some are -
 
 👤 **Arunim Gupta**
 
-* E-Mail: atharv.jairath@gmail.com
+* E-Mail: arunim19025@iiitd.ac.in
 * Github: [@arunim19025](https://github.com/arunim19025)
 * LinkedIn: [@ArunimGupta](https://www.linkedin.com/in/aru10gupta/)
 
