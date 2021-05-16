@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to AasPass 👋</h1>
+<h1 align="center">Welcome to Aas Pass 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.2-blue.svg?cacheSeconds=2592000" />
 </p>
@@ -31,27 +31,27 @@ Future Prospects for our application are extensive. Some are -
 
 👤 **Atharv Jairath**
 
-* Website: atharv.jairath@gmail.com
+* E-Mail: atharv.jairath@gmail.com
 * Github: [@atharvjairath](https://github.com/atharvjairath)
 * LinkedIn: [@Atharvjairath](https://www.linkedin.com/in/atharv-jairath-99aa78118/)
 
 👤 **Satwik Dudeja**
 
-* Website: satwikdudeja@gmail.com
+* E-Mail: satwikdudeja@gmail.com
 * Github: [@satwik3011](https://github.com/satwik3011)
 * LinkedIn: [@SatwikDudeja](https://www.linkedin.com/in/satwikdudeja/)
 
 👤 **Ishaan Bajaj**
 
-* Website: ishaanbajaj90@gmail.com
+* E-Mail: ishaanbajaj90@gmail.com
 * Github: [@ishaanbajaj30](https://github.com/ishaanbajaj30)
 * LinkedIn: [@IshaanBajaj](https://www.linkedin.com/in/ishaan-bajaj-159b191b6/)
 
 👤 **Arunim Gupta**
 
-* Website: atharv.jairath@gmail.com
-* Github: [@atharvjairath](https://github.com/atharvjairath)
-* LinkedIn: [@Atharvjairath](https://www.linkedin.com/in/atharv-jairath-99aa78118/)
+* E-Mail: atharv.jairath@gmail.com
+* Github: [@arunim19025](https://github.com/arunim19025)
+* LinkedIn: [@ArunimGupta](https://www.linkedin.com/in/aru10gupta/)
 
 ## 🤔 How to contribute
 
